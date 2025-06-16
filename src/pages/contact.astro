@@ -1,0 +1,300 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Contact - Rendez-vous gratuit automatisation IA avec Lukasz Kulig" 
+  description="Prenez rendez-vous gratuit pour votre projet d'automatisation IA. Consultation 15min sans engagement. Expert processus PME e-commerce. Contact direct."
+>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary/5 to-primary-light/10 py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-neutral-900 mb-6">
+            Prenez rendez-vous gratuit pour votre projet d'automatisation IA
+          </h1>
+          <p class="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto">
+            Consultation téléphonique de 15 minutes sans engagement pour analyser vos processus et identifier vos premières opportunités d'automatisation rentables.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Contact Form -->
+            <div>
+              <h2 class="text-3xl font-bold text-neutral-900 mb-8">
+                Formulaire de contact pour votre automatisation
+              </h2>
+              
+              <form class="space-y-6" action="#" method="POST">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label for="firstname" class="block text-sm font-medium text-neutral-700 mb-2">
+                      Prénom *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="firstname" 
+                      name="firstname" 
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      placeholder="Votre prénom"
+                    />
+                  </div>
+                  <div>
+                    <label for="lastname" class="block text-sm font-medium text-neutral-700 mb-2">
+                      Nom *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="lastname" 
+                      name="lastname" 
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      placeholder="Votre nom"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">
+                    Email professionnel *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    placeholder="votre.email@entreprise.com"
+                  />
+                </div>
+
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-neutral-700 mb-2">
+                    Téléphone
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    placeholder="06 12 34 56 78"
+                  />
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-medium text-neutral-700 mb-2">
+                    Entreprise / Secteur d'activité
+                  </label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company"
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    placeholder="Nom de votre entreprise et secteur"
+                  />
+                </div>
+
+                <div>
+                  <label for="project" class="block text-sm font-medium text-neutral-700 mb-2">
+                    Décrivez votre projet d'automatisation *
+                  </label>
+                  <textarea 
+                    id="project" 
+                    name="project" 
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-vertical"
+                    placeholder="Décrivez les tâches que vous souhaitez automatiser, vos problématiques actuelles et vos objectifs..."
+                  ></textarea>
+                </div>
+
+                <div>
+                  <label for="budget" class="block text-sm font-medium text-neutral-700 mb-2">
+                    Budget mensuel envisagé pour l'automatisation
+                  </label>
+                  <select 
+                    id="budget" 
+                    name="budget"
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                  >
+                    <option value="">Sélectionnez votre budget</option>
+                    <option value="500-1000">500 - 1 000€</option>
+                    <option value="1000-2500">1 000 - 2 500€</option>
+                    <option value="2500-5000">2 500 - 5 000€</option>
+                    <option value="5000+">5 000€ et plus</option>
+                    <option value="a-definir">À définir ensemble</option>
+                  </select>
+                </div>
+
+                <div class="flex items-start">
+                  <input 
+                    type="checkbox" 
+                    id="consent" 
+                    name="consent" 
+                    required
+                    class="mt-1 h-4 w-4 text-primary border-neutral-300 rounded focus:ring-primary"
+                  />
+                  <label for="consent" class="ml-3 text-sm text-neutral-600">
+                    J'accepte d'être contacté par email ou téléphone concernant ma demande d'automatisation. *
+                  </label>
+                </div>
+
+                <button 
+                  type="submit" 
+                  class="w-full bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  aria-label="Envoyer demande rendez-vous automatisation"
+                >
+                  🚀 Prendre rendez-vous gratuit (15 min)
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Info & Benefits -->
+            <div class="space-y-8">
+              <!-- Contact Direct -->
+              <div class="bg-gradient-to-br from-primary/5 to-primary-light/10 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-6">
+                  Contact direct pour votre automatisation
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <div class="text-primary text-2xl mr-4">📧</div>
+                    <div>
+                      <p class="font-semibold text-neutral-900">Email</p>
+                      <a href="mailto:contact@lukaskulig.fr" class="text-primary hover:underline">
+                        contact@lukaskulig.fr
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="text-primary text-2xl mr-4">🌍</div>
+                    <div>
+                      <p class="font-semibold text-neutral-900">Zone d'intervention</p>
+                      <p class="text-neutral-600">France entière (télétravail)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="text-primary text-2xl mr-4">⏰</div>
+                    <div>
+                      <p class="font-semibold text-neutral-900">Délai de réponse</p>
+                      <p class="text-neutral-600">Moins de 24h ouvrées</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- What to Expect -->
+              <div class="bg-neutral-50 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-6">
+                  Ce que vous obtenez lors de notre premier échange
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <span class="text-primary mr-3 text-xl">✅</span>
+                    <span class="text-neutral-700">
+                      <strong>Analyse gratuite</strong> de vos processus actuels et identification des tâches chronophages
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-3 text-xl">✅</span>
+                    <span class="text-neutral-700">
+                      <strong>Recommandations concrètes</strong> d'automatisation adaptées à votre secteur
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-3 text-xl">✅</span>
+                    <span class="text-neutral-700">
+                      <strong>Estimation du ROI</strong> et du temps de mise en œuvre pour chaque solution
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-3 text-xl">✅</span>
+                    <span class="text-neutral-700">
+                      <strong>Plan d'action prioritaire</strong> pour débuter votre transformation digitale
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Garantees -->
+              <div class="bg-accent/10 p-8 rounded-2xl border border-accent/20">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-6">
+                  Mes garanties pour votre tranquillité
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <span class="text-accent mr-3 text-xl">🔒</span>
+                    <span class="text-neutral-700">
+                      <strong>Confidentialité totale</strong> sur vos processus et données business
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-3 text-xl">🎯</span>
+                    <span class="text-neutral-700">
+                      <strong>Conseils honnêtes</strong> : je vous déconseille si l'automatisation n'est pas rentable
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-3 text-xl">💡</span>
+                    <span class="text-neutral-700">
+                      <strong>Valeur immédiate</strong> : vous repartez avec des pistes concrètes même sans engagement
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-neutral-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-12 text-center">
+            Questions fréquentes sur l'automatisation IA
+          </h2>
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="font-semibold text-lg text-neutral-900 mb-3">
+                Combien coûte une solution d'automatisation sur-mesure ?
+              </h3>
+              <p class="text-neutral-600">
+                Le coût varie selon la complexité de vos processus. Mes tarifs démarrent à partir de 500€ pour une automatisation simple. Je propose toujours une première mission test à prix réduit pour valider la rentabilité avant tout engagement long terme.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="font-semibold text-lg text-neutral-900 mb-3">
+                Combien de temps faut-il pour automatiser mes processus ?
+              </h3>
+              <p class="text-neutral-600">
+                Pour une automatisation simple (ex: synchronisation CRM), comptez 1-2 semaines. Pour des projets plus complexes avec IA conversationnelle, le délai peut aller jusqu'à 4-6 semaines. Je vous fournis toujours un planning détaillé après notre premier échange.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="font-semibold text-lg text-neutral-900 mb-3">
+                Mes données sont-elles en sécurité lors de l'automatisation ?
+              </h3>
+              <p class="text-neutral-600">
+                Absolument. Je travaille uniquement avec des plateformes certifiées (RGPD, SOC2) et je signe un accord de confidentialité avant tout projet. Vos données ne transitent jamais par des serveurs tiers non sécurisés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

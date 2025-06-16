@@ -1,0 +1,125 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const { title, description, canonical, noindex = false } = Astro.props;
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Lukasz Kulig - Consultant Automatisation & IA" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Lukasz Kulig - Consultant Automatisation & IA",
+      "description": "Expert en automatisation et intelligence artificielle pour PME et e-commerce. Création d'agents IA sur-mesure et optimisation des processus.",
+      "url": "https://lukaskulig.fr",
+      "telephone": "+33-XXX-XXX-XXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Lukasz Kulig"
+      },
+      "serviceArea": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "areaServed": "France",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services d'automatisation et IA",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatisation des processus",
+              "description": "Automatisation des tâches chronophages pour PME et e-commerce"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création d'agents IA",
+              "description": "Développement d'agents IA sur-mesure pour optimiser vos workflows"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-neutral-50 text-neutral-900 font-sans">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #00b4d8;
+    outline-offset: 2px;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00b4d8;
+    border-radius: 4px;
+  }
+</style>
