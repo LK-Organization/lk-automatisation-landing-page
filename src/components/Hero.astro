@@ -1,3 +1,6 @@
+---
+import {CircleCheckBig }from  '@lucide/astro';
+---
 <section class="bg-gradient-to-br from-primary/5 to-primary-light/10 py-5 md:py-20 ">
   <div class=" container mx-auto px-4 sm:px-6 lg:px-14">
   
@@ -16,7 +19,7 @@
       </h2>
       
       <!-- Subtitle -->
-      <p class="text-xl text-left sm:text-2xl text-neutral-600 mb-8  mx-auto animate-slide-up">
+      <p class="text-lg text-left text-neutral-600 mb-8  mx-auto animate-slide-up">
         Bienvenue ! Je suis Lukasz Kulig, expert en automatisation des processus et création d’agents IA.<br>
 J’aide les entrepreneurs, PME et e-commerçants à automatiser leurs tâches chronophages et à optimiser leurs opérations.
 
@@ -25,19 +28,18 @@ J’aide les entrepreneurs, PME et e-commerçants à automatiser leurs tâches c
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row gap-4  items-center mb-12 animate-slide-up">
         <a 
-          href="https://wa.me/33648091511" 
+          href="mailto:contact@lukaskulig.fr" 
           class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
           aria-label="Prendre rendez-vous gratuit automatisation IA"
         >
-          Réserver un appel gratuit
-
+          Demander un audit gratuit
         </a>
         <a 
           href="https://wa.me/33648091511" 
           class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all"
           aria-label="Demander audit gratuit processus automatisation"
         >
-          Voir mon profil Malt
+          Réserver un appel
         </a>
       </div>
       
@@ -104,4 +106,14 @@ J’aide les entrepreneurs, PME et e-commerçants à automatiser leurs tâches c
       </div>
       </div>
       
+</section>
+<section class="py-20 bg-gradient-to-br from-primary/5 to-primary-light/10 " id="pourquoi-moi">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-14 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">Pourquoi me faire confiance ?</h2>
+    <ul class="space-y-4 text-lg text-neutral-700 max-w-xl mx-auto text-left">
+      <li class="flex items-center gap-2"><CircleCheckBig color='#00b4d8' /> 10+ ans d’expérience en automatisation de processus</li>
+      <li class="flex items-center gap-2"><CircleCheckBig color='#00b4d8' />  Expert certifié sur Make, Zapier et OpenAI</li>
+      <li class="flex items-start gap-2"><CircleCheckBig color='#00b4d8' />  Approche humaine et résultats concrets dès la première mission</li>
+    </ul>
+  </div>
 </section>
