@@ -91,7 +91,7 @@ export default function TestimonialsCarousel() {
       {/* Modal */}
       {selectedTestimonial && (
         <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center px-4"
+          className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex items-center justify-center px-4"
           onClick={closeModal}
         >
           <div
