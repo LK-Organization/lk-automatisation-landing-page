@@ -1,5 +1,4 @@
-// TestimonialsCarousel.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -28,6 +27,13 @@ const testimonials = [
 
 export default function TestimonialsCarousel() {
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedTestimonial && modalRef.current) {
+      modalRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [selectedTestimonial]);
 
   const openModal = (testimonial) => {
     setSelectedTestimonial(testimonial);
@@ -46,6 +52,7 @@ export default function TestimonialsCarousel() {
           }
         `}
       </style>
+
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-10">Ils m'ont fait confiance</h2>
 
@@ -91,6 +98,7 @@ export default function TestimonialsCarousel() {
       {/* Modal */}
       {selectedTestimonial && (
         <div
+          ref={modalRef}
           className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex items-center justify-center px-4"
           onClick={closeModal}
         >
